@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caesar Cipher Convertor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>🔐 Caesar Cipher Convertor</h1>
+    <p class="subtitle">Just for fun — no real security here!</p>
+
+    <label for="input">Your text</label>
+    <textarea id="input" placeholder="Type something like: Hello World"></textarea>
+
+    <div class="row">
+      <div>
+        <label for="shift">Shift (1–25)</label>
+        <input type="number" id="shift" value="3" min="1" max="25">
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="encryptBtn">Encrypt →</button>
+      <button id="decryptBtn">← Decrypt</button>
+      <button id="copyBtn" class="ghost">Copy</button>
+      <button id="clearBtn" class="ghost">Clear</button>
+    </div>
+
+    <label for="output">Result</label>
+    <textarea id="output" readonly placeholder="Result appears here..."></textarea>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
