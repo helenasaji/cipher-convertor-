@@ -22,7 +22,6 @@ function getShift() {
   return shift;
 }
 
-
 document.getElementById('encryptBtn').addEventListener('click', () => {
   output.value = caesar(input.value, getShift());
 });
@@ -30,7 +29,6 @@ document.getElementById('encryptBtn').addEventListener('click', () => {
 document.getElementById('decryptBtn').addEventListener('click', () => {
   output.value = caesar(input.value, -getShift());
 });
-
 
 document.getElementById('copyBtn').addEventListener('click', () => {
   if (!output.value) return;
@@ -41,13 +39,11 @@ document.getElementById('copyBtn').addEventListener('click', () => {
   setTimeout(() => (btn.textContent = original), 1200);
 });
 
-
 document.getElementById('clearBtn').addEventListener('click', () => {
   input.value = '';
   output.value = '';
   input.focus();
 });
-
 
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
@@ -55,14 +51,13 @@ const themeLabel = document.getElementById('themeLabel');
 
 const THEME_SHIFT = 3;
 
-// "Light" and "Dark" shifted by 3 → shows encoded word on the button
 const THEME_LABELS = {
   light: {
-    cipher: caesar('Light', THEME_SHIFT), // "Oljkw"
+    cipher: caesar('Light', THEME_SHIFT),
     icon: '☀️',
   },
   dark: {
-    cipher: caesar('Dark', THEME_SHIFT),  // "Dqun"
+    cipher: caesar('Dark', THEME_SHIFT),
     icon: '🌙',
   },
 };
@@ -86,8 +81,6 @@ themeToggle.addEventListener('click', () => {
   applyTheme(next);
   localStorage.setItem('theme', next);
 });
-
-/* ---------- Load saved theme on startup ---------- */
 
 const savedTheme = localStorage.getItem('theme');
 applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
