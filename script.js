@@ -53,11 +53,11 @@ const THEME_SHIFT = 3;
 
 const THEME_LABELS = {
   light: {
-    cipher: caesar('Light', THEME_SHIFT),
+    cipher: 'Day',
     icon: '☀️',
   },
   dark: {
-    cipher: caesar('Dark', THEME_SHIFT),
+    cipher: 'Night',
     icon: '🌙',
   },
 };
