@@ -1,3 +1,27 @@
+:root {
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #cbd5e1;
+  --input-bg: #f8fafc;
+  --accent: #0ea5e9;
+  --accent-hover: #38bdf8;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #334155;
+  --input-bg: #0f172a;
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,7 +72,8 @@ label {
   margin-top: 16px;
 }
 
-textarea, input[type="number"] {
+textarea,
+input[type="number"] {
   width: 100%;
   padding: 12px;
   border-radius: 8px;
@@ -65,7 +90,8 @@ textarea {
   min-height: 90px;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
   border-color: var(--accent);
 }
@@ -102,18 +128,6 @@ button:active {
   transform: scale(0.97);
 }
 
-button.ghost {
-  background: transparent;
-  color: var(--muted);
-  border: 1px solid var(--border);
-}
-
-button.ghost:hover {
-  background: var(--border);
-  color: var(--text);
-}
-
-/* Theme toggle */
 .theme-toggle {
   position: absolute;
   top: 16px;
